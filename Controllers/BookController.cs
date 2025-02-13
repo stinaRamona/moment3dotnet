@@ -48,7 +48,7 @@ namespace moment3dotnet.Controllers
         // GET: Book/Create
         public IActionResult Create()
         {
-            ViewData["GenreModelId"] = new SelectList(_context.Genres, "Id", "Id");
+            ViewData["GenreModelId"] = new SelectList(_context.Genres, "Id", "GenreName");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace moment3dotnet.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["GenreModelId"] = new SelectList(_context.Genres, "Id", "Id", bookModel.GenreModelId);
+            ViewData["GenreModelId"] = new SelectList(_context.Genres, "Id", "GenreName", bookModel.GenreModelId);
             return View(bookModel);
         }
 
@@ -82,7 +82,7 @@ namespace moment3dotnet.Controllers
             {
                 return NotFound();
             }
-            ViewData["GenreModelId"] = new SelectList(_context.Genres, "Id", "Id", bookModel.GenreModelId);
+            ViewData["GenreModelId"] = new SelectList(_context.Genres, "Id", "GenreName", bookModel.GenreModelId);
             return View(bookModel);
         }
 
@@ -118,7 +118,7 @@ namespace moment3dotnet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["GenreModelId"] = new SelectList(_context.Genres, "Id", "Id", bookModel.GenreModelId);
+            ViewData["GenreModelId"] = new SelectList(_context.Genres, "Id", "GenreName", bookModel.GenreModelId);
             return View(bookModel);
         }
 
