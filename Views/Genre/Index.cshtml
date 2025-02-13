@@ -14,8 +14,11 @@
 <body>
 <h1>Genres</h1>
 <p>
-    <a asp-action="Create">Lägg till genre</a> 
+    <a asp-action="Create" class="link-success">Lägg till genre</a> 
+| <a asp-area="" asp-controller="Book" asp-action="Index" class="link-success">Tillbaka till boklistan</a>
 </p>
+
+
 <table class="table">
     <thead>
         <tr>
@@ -41,6 +44,5 @@
     </tbody>
 </table>
 
-<a asp-area="" asp-controller="Book" asp-action="Index">Tillbaka till boklistan</a>
 </body>
 </html>
