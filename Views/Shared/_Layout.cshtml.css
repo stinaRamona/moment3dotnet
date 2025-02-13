@@ -44,6 +44,11 @@ button.accept-policy {
   line-height: inherit;
 }
 
+.check-box {
+  background-color: #198754;
+  color: white; 
+}
+
 .footer {
   position: absolute;
   bottom: 0;

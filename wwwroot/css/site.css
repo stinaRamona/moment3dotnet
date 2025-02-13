@@ -30,6 +30,7 @@ body {
   text-align: start;
 } 
 
-.form-check-input {
-  border: 2px solid #198754; 
+table tbody td tr input[type=checkbox]:checked {
+  background-color:#198754; 
+  color: white; 
 }
