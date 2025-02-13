@@ -13,27 +13,26 @@
 </head>
 <body>
 
-<h1>Create</h1>
-<h4>GenreModel</h4>
+<h1>Lägg till kategori</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="GenreName" class="control-label"></label>
+                <label asp-for="GenreName" class="control-label">Namn på genre</label>
                 <input asp-for="GenreName" class="form-control" />
                 <span asp-validation-for="GenreName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Lägg till" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Lista på genres</a>
 </div>
 
 </body>
